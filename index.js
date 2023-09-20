@@ -2,6 +2,7 @@ const express = require("express");
 const check = require("./middle");
 const app = express();
 app.use(express.json());
+const port= 8070;
 
 app.use(express.urlencoded({extended: true }));
 
@@ -32,8 +33,8 @@ app.post("/student",check,(req, res) => {
     res.status(200).send(datas);
 });
 
-const port= 8070;
+
 app.listen(port, ()=>{
-    console.log(`Server is listening on port http://localhost:${port}`);
+    console.log(`Server is listening http://localhost:${port}`);
 })
 
