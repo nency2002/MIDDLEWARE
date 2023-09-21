@@ -15,8 +15,9 @@ const check = (req , res , next) => {
     else if(req.body.course){
         res.status(400).json({message: "Please provide all the fields name and grid"});
     }
+    else{
+        res.status(400).json({message: "Please provide all the fields name and grid and course"});
+    }
 }
 
 module.exports = check;
-
-
